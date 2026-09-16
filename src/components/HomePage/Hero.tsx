@@ -1,5 +1,5 @@
-import desktopImage from "../../assets/hero-bg-desktop.png";
-import mobileImage from "../../assets/hero-bg-mobile.png";
+import desktopImage from "../../assets/hero-desktop.png";
+import mobileImage from "../../assets/hero-mobile.png";
 
 const Hero = () => {
     return (
@@ -10,14 +10,23 @@ const Hero = () => {
                 <img src={mobileImage} alt="" className="h-full w-full object-cover" />
             </picture>
 
-            <div
-                className="pointer-events-none absolute inset-0
-                bg-[linear-gradient(to_bottom,rgba(27,14,7,0.16)_0%,rgba(27,14,7,0.66)_38%,rgba(27,14,7,0.66)_62%,rgba(27,14,7,0.12)_100%)]
-                lg:bg-[linear-gradient(to_right,rgba(27,14,7,0.85)_0%,rgba(27,14,7,0.6)_60%,transparent_100%)]"
-            />
 
             <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-16 text-center md:px-12 lg:justify-start lg:px-20 lg:text-left">
-                <div className="flex w-full max-w-xl flex-col items-center md:max-w-2xl lg:block lg:max-w-3xl">
+
+                <div className="
+                    relative isolate flex flex-col items-center 
+                    w-fit max-w-full lg:items-start
+
+                    before:pointer-events-none before:absolute
+                    before:-inset-x-6 before:-inset-y-12 before:-z-10
+                    before:bg-[radial-gradient(ellipse_at_center,rgba(18,9,4,0.72)_0%,rgba(18,9,4,0.48)_45%,transparent_75%)]
+
+                    md:before:-inset-x-10
+
+                    lg:before:-left-x-40
+                    lg:before:-inset-y-30
+                    
+                    ">
 
                     <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-[#d8b579] md:mb-4 md:tracking-[0.35em]">
                         Since 1952

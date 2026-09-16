@@ -4,6 +4,7 @@ import Header from '../../components/HomePage/Header';
 const HomePage = () => {
     return(
         <div>
+            <Header />
             <Hero />
         </div>
     );
