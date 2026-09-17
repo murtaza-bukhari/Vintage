@@ -78,7 +78,7 @@ const Header = () => {
             Services
           </a>
           <a
-            href=""
+            href="#testimonials"
             onClick={() => setMenuOpen(false)}
             className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
