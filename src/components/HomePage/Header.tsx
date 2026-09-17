@@ -57,18 +57,18 @@ const Header = () => {
             }`}
         >
           <a
-            href=""
+            href="#home"
             onClick={() => setMenuOpen(false)}
             className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
             Home
           </a>
           <a
-            href=""
+            href="#about"
             onClick={() => setMenuOpen(false)}
             className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
-            Services
+            About
           </a>
           <a
             href=""

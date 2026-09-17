@@ -3,7 +3,7 @@ import mobileImage from "../../assets/hero-mobile.png";
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen overflow-hidden">
+        <section id='home' className="relative min-h-screen overflow-hidden">
 
             <picture className="absolute inset-0">
                 <source media="(min-width: 1024px)" srcSet={desktopImage} />

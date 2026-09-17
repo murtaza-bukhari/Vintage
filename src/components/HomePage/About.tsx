@@ -2,13 +2,15 @@ import Slideshow from './SlideShow'
 
 const About = () => {
   return (
-    <section className="flex min-h-screen items-center bg-[#D8C2A8] px-6 py-34 md:px-12 lg:px-20">
+    <section id='about' className="-scroll-mt-12 flex min-h-screen items-center bg-[#D8C2A8] px-6 py-30 md:px-12 md:py-32 lg:px-20 lg:py-34">
+      
       <div className="mx-auto w-full max-w-7xl">
-        <p className="mb-3 text-sm tracking-[0.35em] text-[#9A743E]">
+        
+        <p className="mb-3 text-sm tracking-[0.35em] text-center text-[#74542E] font-semibold lg:text-left">
           OUR SPACE
         </p>
 
-        <h2 className="mb-12 font-serif text-4xl text-[#2B1A12] md:text-5xl">
+        <h2 className="mb-12 font-serif text-4xl text-center text-[#2B1A12] md:text-5xl  lg:text-left">
           Tradition in Every Detail
         </h2>
 
@@ -17,7 +19,8 @@ const About = () => {
             <Slideshow />
           </div>
 
-          <div className="w-full text-[#38251B] lg:w-2/5">
+          <div className="flex w-full flex-col justify-center items-center text-center text-[#38251B] lg:w-2/5 lg:items-start lg:text-left">
+            
             <div className="mb-7 h-px w-16 bg-[#9A743E]" />
 
             <h3 className="mb-5 font-serif text-3xl leading-tight">
@@ -38,6 +41,7 @@ const About = () => {
               modern comfort, giving every guest a moment to slow down, reset,
               and leave feeling their best.
             </p>
+
           </div>
         </div>
       </div>
