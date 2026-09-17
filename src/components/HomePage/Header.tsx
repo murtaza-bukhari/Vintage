@@ -71,23 +71,23 @@ const Header = () => {
             About
           </a>
           <a
-            href=""
+            href="#services"
             onClick={() => setMenuOpen(false)}
             className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
-            About
+            Services
           </a>
           <a
             href=""
             onClick={() => setMenuOpen(false)}
             className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
-            Reviews
+            Testimonials
           </a>
           <a
             href=""
             className="inline-flex h-8 items-center justify-center rounded-lg
-             border border-[#d7a953] px-4 text-sm font-semibold leading-none
+             max-w-24 border border-[#d7a953] px-4 text-sm font-semibold leading-none
              tracking-wide text-[#f4d38a] transition-all duration-300
              hover:bg-[#d7a953] hover:text-[#2a160b]
              focus-visible:outline-2 focus-visible:outline-offset-4
