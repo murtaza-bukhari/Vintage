@@ -1,6 +1,8 @@
 import { useState } from "react";
 import logo from '../../assets/logo.png'
 
+import { Link as ScrollLink } from "react-scroll";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -25,7 +27,7 @@ const Header = () => {
           type="button"
           className="relative flex h-10 w-10 cursor-pointer items-center justify-center
              rounded-full border border-[#d7a953]/40 bg-black/10
-             transition-all duration-300 hover:border-[#d7a953]/80
+             transition-all duration-400 hover:border-[#d7a953]/80
              hover:bg-[#d7a953]/10
              focus-visible:outline-2 focus-visible:outline-offset-4
              focus-visible:outline-[#f4d38a] lg:hidden"
@@ -36,13 +38,13 @@ const Header = () => {
         >
           <span
             aria-hidden="true"
-            className={`absolute h-px w-5 bg-[#d7a953] transition-transform duration-300 ${menuOpen ? "rotate-45" : "-translate-y-1.5"
+            className={`absolute h-px w-5 bg-[#d7a953] transition-transform duration-400 ${menuOpen ? "rotate-45" : "-translate-y-1.5"
               }`}
           />
 
           <span
             aria-hidden="true"
-            className={`absolute h-px w-5 bg-[#d7a953] transition-transform duration-300 ${menuOpen ? "-rotate-45" : "translate-y-1.5"
+            className={`absolute h-px w-5 bg-[#d7a953] transition-transform duration-400 ${menuOpen ? "-rotate-45" : "translate-y-1.5"
               }`}
           />
         </button>
@@ -51,50 +53,74 @@ const Header = () => {
           id="main-navigation"
           aria-label="Main navigation"
           className={`absolute left-0 top-20 w-full flex-col gap-4
-            border-b border-[#8b693d] bg-[#2a1b14] px-5 py-6 
-            lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:border-0 lg:bg-transparent lg:p-0 
-            ${menuOpen ? "flex" : "hidden"
-            }`}
+          border-b border-[#8b693d] bg-[#2a1b14] px-5 py-6
+          lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8
+          lg:border-0 lg:bg-transparent lg:p-0
+          ${menuOpen ? "flex" : "hidden"}`}
         >
-          <a
-            href="#home"
+          <ScrollLink
+            to="home"
+            smooth="easeOutCubic"
+            duration={400}
+            offset={-80}
+            spy={true}
             onClick={() => setMenuOpen(false)}
-            className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
+            className="w-fit cursor-pointer border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
             Home
-          </a>
-          <a
-            href="#about"
+          </ScrollLink>
+
+          <ScrollLink
+            to="about"
+            smooth="easeOutCubic"
+            duration={400}
+            offset={-80}
+            spy={true}
             onClick={() => setMenuOpen(false)}
-            className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
+            className="w-fit cursor-pointer border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
             About
-          </a>
-          <a
-            href="#services"
+          </ScrollLink>
+
+          <ScrollLink
+            to="services"
+            smooth="easeOutCubic"
+            duration={400}
+            offset={-80}
+            spy={true}
             onClick={() => setMenuOpen(false)}
-            className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
+            className="w-fit cursor-pointer border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
             Services
-          </a>
-          <a
-            href="#testimonials"
+          </ScrollLink>
+
+          <ScrollLink
+            to="testimonials"
+            smooth="easeOutCubic"
+            duration={400}
+            offset={-80}
+            spy={true}
             onClick={() => setMenuOpen(false)}
-            className="w-fit border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
+            className="w-fit cursor-pointer border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
           >
             Testimonials
-          </a>
-          <a
-            href=""
-            className="inline-flex h-8 items-center justify-center rounded-lg
-             max-w-24 border border-[#d7a953] px-4 text-sm font-semibold leading-none
-             tracking-wide text-[#f4d38a] transition-all duration-300
-             hover:bg-[#d7a953] hover:text-[#2a160b]
-             focus-visible:outline-2 focus-visible:outline-offset-4
-             focus-visible:outline-[#f4d38a]"
+          </ScrollLink>
+
+          <ScrollLink
+            to="contact"
+            smooth="easeOutCubic"
+            duration={400}
+            offset={-80}
+            onClick={() => setMenuOpen(false)}
+            className="inline-flex h-8 max-w-24 cursor-pointer items-center justify-center rounded-lg
+            border border-[#d7a953] px-4 text-sm font-semibold leading-none
+            tracking-wide text-[#f4d38a] transition-all duration-400
+            hover:bg-[#d7a953] hover:text-[#2a160b]
+            focus-visible:outline-2 focus-visible:outline-offset-4
+            focus-visible:outline-[#f4d38a]"
           >
             Contact
-          </a>
+          </ScrollLink>
         </nav>
       </div>
     </header>

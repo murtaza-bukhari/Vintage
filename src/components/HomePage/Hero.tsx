@@ -1,19 +1,22 @@
 import desktopImage from "../../assets/hero-desktop.png";
 import mobileImage from "../../assets/hero-mobile.png";
 
+import { Element } from 'react-scroll'
+
 const Hero = () => {
     return (
-        <section id='home' className="relative min-h-screen overflow-hidden">
+        <Element name='home'>
+            <section className="relative min-h-screen overflow-hidden">
 
-            <picture className="absolute inset-0">
-                <source media="(min-width: 1024px)" srcSet={desktopImage} />
-                <img src={mobileImage} alt="" className="h-full w-full object-cover" />
-            </picture>
+                <picture className="absolute inset-0">
+                    <source media="(min-width: 1024px)" srcSet={desktopImage} />
+                    <img src={mobileImage} alt="" className="h-full w-full object-cover" />
+                </picture>
 
 
-            <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-16 text-center md:px-12 lg:justify-start lg:px-20 lg:text-left">
+                <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-16 text-center md:px-12 lg:justify-start lg:px-20 lg:text-left">
 
-                <div className="
+                    <div className="
                     relative isolate flex flex-col items-center 
                     w-fit max-w-full lg:items-start
 
@@ -28,41 +31,42 @@ const Hero = () => {
                     
                     ">
 
-                    <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-[#d8b579] md:mb-4 md:tracking-[0.35em]">
-                        Since 1952
-                    </p>
+                        <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-[#d8b579] md:mb-4 md:tracking-[0.35em]">
+                            Since 1952
+                        </p>
 
-                    <div className="w-fit max-w-full">
-                        <h1 className="font-serif text-4xl leading-[1.05] text-[#f5eee3] sm:text-5xl md:text-6xl lg:text-7xl">
-                            The Vintage Cut
-                        </h1>
+                        <div className="w-fit max-w-full">
+                            <h1 className="font-serif text-4xl leading-[1.05] text-[#f5eee3] sm:text-5xl md:text-6xl lg:text-7xl">
+                                The Vintage Cut
+                            </h1>
 
-                        <div aria-hidden="true" className="mx-auto mt-2 h-[3px] w-[80%] rounded-full bg-gradient-to-r from-[#f4d38a] via-[#d7a953] to-[#a7772f] lg:mx-0" />
-                    </div>
+                            <div aria-hidden="true" className="mx-auto mt-2 h-[3px] w-[80%] rounded-full bg-gradient-to-r from-[#f4d38a] via-[#d7a953] to-[#a7772f] lg:mx-0" />
+                        </div>
 
-                    <div className="mt-6 flex w-full max-w-70 items-center justify-center gap-3 lg:max-w-90 lg:justify-start">
+                        <div className="mt-6 flex w-full max-w-70 items-center justify-center gap-3 lg:max-w-90 lg:justify-start">
 
-                        <button className="min-w-0 flex-1 cursor-pointer rounded-lg border border-[#d7a953] bg-transparent 
+                            <button className="min-w-0 flex-1 cursor-pointer rounded-lg border border-[#d7a953] bg-transparent 
                         px-4 py-2 font-semibold tracking-wide text-[#fff] transition-all duration-300 
                         hover:bg-[#d7a953] hover:text-[#2a160b]
                         focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f4d38a]">
-                            Book Now
-                        </button>
+                                Book Now
+                            </button>
 
-                        <button className="min-w-0 flex-1 cursor-pointer rounded-lg border border-[#d7a953] bg-transparent 
+                            <button className="min-w-0 flex-1 cursor-pointer rounded-lg border border-[#d7a953] bg-transparent 
                         px-4 py-2 font-semibold tracking-wide text-[#fff] transition-all duration-300 
                         hover:bg-[#d7a953] hover:text-[#2a160b]
                         focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f4d38a]">
-                            Shop
-                        </button>
+                                Shop
+                            </button>
+
+                        </div>
 
                     </div>
-
                 </div>
-            </div>
 
 
-        </section>
+            </section>
+        </Element>
     );
 };
 
