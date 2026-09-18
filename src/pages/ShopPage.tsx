@@ -1,5 +1,13 @@
+import Items from "../components/ShopPage/Items";
+import ShopHeader from "../components/ShopPage/ShopHeader";
+
 const ShopPage = () => {
-  return <h1>Our Shop</h1>;
+  return (
+    <>
+      <ShopHeader />
+      <Items />
+    </>
+  );
 };
 
 export default ShopPage;
