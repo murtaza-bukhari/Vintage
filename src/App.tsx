@@ -1,9 +1,14 @@
-import HomePage from "./pages/HomePage"
+import { Routes, Route } from "react-router";
+import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/ShopPage";
 
-function App() {
+const App = () => {
   return (
-    <HomePage />
-  )
-}
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/shop" element={<ShopPage />} />
+    </Routes>
+  );
+};
 
-export default App
+export default App;

@@ -3,6 +3,8 @@ import mobileImage from "../../assets/hero-mobile.png";
 
 import { Element } from 'react-scroll'
 
+import { Link as RouterLink } from "react-router";
+
 const Hero = () => {
     return (
         <Element name='home'>
@@ -52,12 +54,12 @@ const Hero = () => {
                                 Book Now
                             </button>
 
-                            <button className="min-w-0 flex-1 cursor-pointer rounded-lg border border-[#d7a953] bg-transparent 
+                            <RouterLink to="/shop" className="min-w-0 flex-1 text-center cursor-pointer rounded-lg border border-[#d7a953] bg-transparent 
                         px-4 py-2 font-semibold tracking-wide text-[#fff] transition-all duration-300 
                         hover:bg-[#d7a953] hover:text-[#2a160b]
                         focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f4d38a]">
                                 Shop
-                            </button>
+                            </RouterLink>
 
                         </div>
 
