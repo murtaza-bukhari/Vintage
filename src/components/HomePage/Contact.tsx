@@ -2,58 +2,46 @@ import { Element } from "react-scroll";
 
 const Contact = () => {
   const inputStyle =
-    "w-full border-b border-[#6B4B36]/30 bg-transparent py-2 " +
-    "text-[#2B1A12] placeholder:text-[#75604E] " +
+    "mt-2 w-full border-b border-[#6B4B36]/40 bg-transparent py-2 " +
+    "text-sm text-[#2B1A12] placeholder:text-[#60493B] " +
     "outline-none transition-colors focus:border-[#2B1A12]";
+
+  const labelStyle = "text-sm font-medium text-[#38251B]";
 
   return (
     <Element name="contact">
-      <section className="bg-[#6B4B36] px-6 py-20 md:px-12 lg:px-20 lg:py-28">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
+      <section className="bg-[#6B4B36] px-6 py-16 md:px-12 lg:px-20 lg:py-24">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-10 lg:gap-20">
           {/* Left side */}
-          <div className="flex flex-col justify-between">
-            <div>
-              <p className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-[#E2C59A]">
-                Get in Touch
+          <div className="text-center md:text-left">
+            <h2 className="font-serif text-4xl text-[#F5EEE3] lg:text-5xl">
+              Contact Us
+            </h2>
+
+            <div className="hidden md:block">
+              <p className="mt-6 max-w-md font-serif text-2xl leading-snug text-[#E4D3C1] lg:text-3xl">
+                Good style starts with a conversation.
               </p>
 
-              <h2 className="max-w-lg font-serif text-4xl leading-tight text-[#F5EEE3] sm:text-5xl lg:text-6xl">
-                Good style starts
-                with a conversation.
-              </h2>
-
-              <p className="mt-6 max-w-md text-sm leading-7 text-[#E4D3C1] sm:text-base">
-                A question about our services or planning your next visit?
+              <p className="mt-4 max-w-sm text-sm leading-7 text-[#E4D3C1]">
+                Have a question about our services or your next visit?
                 Leave us a message. We would love to hear from you.
               </p>
             </div>
           </div>
 
           {/* Right side */}
-          <div className="min-w-0 rounded-sm bg-[#D8C2A8] p-6 sm:p-10 lg:p-12">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#60493B]">
-              Drop Us a Note
-            </p>
-
-            <h3 className="font-serif text-3xl text-[#2B1A12] sm:text-4xl">
-              How can we help?
-            </h3>
-
+          <div className="mx-auto w-full min-w-0 max-w-lg rounded-sm bg-[#C5AC90] p-6 sm:p-8 lg:p-10">
             <form
-              className="mt-6"
               onSubmit={(event) => {
                 event.preventDefault();
               }}
             >
-              <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                 <div className="min-w-0">
-                  <label
-                    htmlFor="contact-name"
-                    className="text-sm font-medium text-[#38251B]"
-                  >
+                  <label htmlFor="contact-name" className={labelStyle}>
                     Your name
                   </label>
-
                   <input
                     id="contact-name"
                     name="name"
@@ -66,13 +54,9 @@ const Contact = () => {
                 </div>
 
                 <div className="min-w-0">
-                  <label
-                    htmlFor="contact-phone"
-                    className="text-sm font-medium text-[#38251B]"
-                  >
+                  <label htmlFor="contact-phone" className={labelStyle}>
                     Phone <span className="font-normal">(optional)</span>
                   </label>
-
                   <input
                     id="contact-phone"
                     name="phone"
@@ -84,14 +68,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="mt-7">
-                <label
-                  htmlFor="contact-email"
-                  className="text-sm font-medium text-[#38251B]"
-                >
+              <div className="mt-6">
+                <label htmlFor="contact-email" className={labelStyle}>
                   Email address
                 </label>
-
                 <input
                   id="contact-email"
                   name="email"
@@ -103,19 +83,15 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="mt-7">
-                <label
-                  htmlFor="contact-message"
-                  className="text-sm font-medium text-[#38251B]"
-                >
+              <div className="mt-6">
+                <label htmlFor="contact-message" className={labelStyle}>
                   Your message
                 </label>
-
                 <textarea
                   id="contact-message"
                   name="message"
-                  rows={2}
-                  placeholder="Tell us what you have in mind..."
+                  rows={4}
+                  placeholder="How can we help?"
                   required
                   className={`${inputStyle} min-h-28 resize-y`}
                 />
@@ -123,7 +99,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="mt-8 flex w-full cursor-pointer items-center justify-between gap-4 rounded-sm bg-[#2B1A12] px-6 py-4 text-sm font-semibold text-[#F5EEE3] transition-colors hover:bg-[#432B1E] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2B1A12]"
+                className="mt-7 w-full cursor-pointer rounded-sm bg-[#2B1A12] px-6 py-3.5 text-sm font-medium text-[#F5EEE3] transition-colors hover:bg-[#432B1E] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2B1A12]"
               >
                 Send Message
               </button>

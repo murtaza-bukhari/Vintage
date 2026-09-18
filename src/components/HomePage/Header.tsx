@@ -110,7 +110,7 @@ const Header = () => {
             to="contact"
             smooth="easeOutCubic"
             duration={400}
-            offset={-80}
+            offset={0}
             onClick={() => setMenuOpen(false)}
             className="inline-flex h-8 max-w-24 cursor-pointer items-center justify-center rounded-lg
             border border-[#d7a953] px-4 text-sm font-semibold leading-none
