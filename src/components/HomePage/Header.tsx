@@ -27,7 +27,7 @@ const Header = () => {
           type="button"
           className="relative flex h-10 w-10 cursor-pointer items-center justify-center
              rounded-full border border-[#d7a953]/40 bg-black/10
-             transition-all duration-400 hover:border-[#d7a953]/80
+             transition-all duration-600 hover:border-[#d7a953]/80
              hover:bg-[#d7a953]/10
              focus-visible:outline-2 focus-visible:outline-offset-4
              focus-visible:outline-[#f4d38a] lg:hidden"
@@ -38,13 +38,13 @@ const Header = () => {
         >
           <span
             aria-hidden="true"
-            className={`absolute h-px w-5 bg-[#d7a953] transition-transform duration-400 ${menuOpen ? "rotate-45" : "-translate-y-1.5"
+            className={`absolute h-px w-5 bg-[#d7a953] transition-transform duration-600 ${menuOpen ? "rotate-45" : "-translate-y-1.5"
               }`}
           />
 
           <span
             aria-hidden="true"
-            className={`absolute h-px w-5 bg-[#d7a953] transition-transform duration-400 ${menuOpen ? "-rotate-45" : "translate-y-1.5"
+            className={`absolute h-px w-5 bg-[#d7a953] transition-transform duration-600 ${menuOpen ? "-rotate-45" : "translate-y-1.5"
               }`}
           />
         </button>
@@ -61,7 +61,7 @@ const Header = () => {
           <ScrollLink
             to="home"
             smooth="easeOutCubic"
-            duration={400}
+            duration={600}
             offset={-80}
             spy={true}
             onClick={() => setMenuOpen(false)}
@@ -73,8 +73,7 @@ const Header = () => {
           <ScrollLink
             to="about"
             smooth="easeOutCubic"
-            duration={400}
-            offset={-80}
+            duration={600}
             spy={true}
             onClick={() => setMenuOpen(false)}
             className="w-fit cursor-pointer border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
@@ -85,8 +84,7 @@ const Header = () => {
           <ScrollLink
             to="services"
             smooth="easeOutCubic"
-            duration={400}
-            offset={-80}
+            duration={600}
             spy={true}
             onClick={() => setMenuOpen(false)}
             className="w-fit cursor-pointer border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
@@ -97,8 +95,7 @@ const Header = () => {
           <ScrollLink
             to="testimonials"
             smooth="easeOutCubic"
-            duration={400}
-            offset={-80}
+            duration={600}
             spy={true}
             onClick={() => setMenuOpen(false)}
             className="w-fit cursor-pointer border-b-2 border-transparent py-1 text-[#f5eee3] hover:border-[#d7a953] focus-visible:border-[#d7a953]"
@@ -109,12 +106,11 @@ const Header = () => {
           <ScrollLink
             to="contact"
             smooth="easeOutCubic"
-            duration={400}
-            offset={0}
+            duration={600}
             onClick={() => setMenuOpen(false)}
             className="inline-flex h-8 max-w-24 cursor-pointer items-center justify-center rounded-lg
             border border-[#d7a953] px-4 text-sm font-semibold leading-none
-            tracking-wide text-[#f4d38a] transition-all duration-400
+            tracking-wide text-[#f4d38a] transition-all duration-600
             hover:bg-[#d7a953] hover:text-[#2a160b]
             focus-visible:outline-2 focus-visible:outline-offset-4
             focus-visible:outline-[#f4d38a]"

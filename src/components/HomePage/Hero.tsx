@@ -6,7 +6,7 @@ import { Element } from 'react-scroll'
 const Hero = () => {
     return (
         <Element name='home'>
-            <section className="relative min-h-screen overflow-hidden">
+            <section className="relative min-h-screen overflow-hidden bg-[#2B1A12]">
 
                 <picture className="absolute inset-0">
                     <source media="(min-width: 1024px)" srcSet={desktopImage} />

@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-10 lg:gap-20">
           {/* Left side */}
           <div className="text-center md:text-left">
-            <h2 className="font-serif text-4xl text-[#F5EEE3] lg:text-5xl">
+            <h2 className="font-serif text-4xl text-[#2B1A12] font-medium lg:text-5xl">
               Contact Us
             </h2>
 
@@ -31,10 +31,11 @@ const Contact = () => {
           </div>
 
           {/* Right side */}
-          <div className="mx-auto w-full min-w-0 max-w-lg rounded-sm bg-[#C5AC90] p-6 sm:p-8 lg:p-10">
+          <div className="mx-auto w-full min-w-0 max-w-lg rounded-2xl bg-[#C5AC90] p-6 sm:p-8 lg:p-10">
             <form
               onSubmit={(event) => {
                 event.preventDefault();
+                event.currentTarget.reset();
               }}
             >
               <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
