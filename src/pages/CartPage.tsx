@@ -1,17 +1,13 @@
-import Items from "../components/ShopPage/Items";
-import ShopHeader from "../components/ShopPage/ShopHeader";
-
 //import { useOutletContext } from "react-router";
 //import type { ShopContext } from "../managers/ShopManager";
 
-const ShopPage = () => {
+const CartPage = () => {
   //const { cart, setCart } = useOutletContext<ShopContext>();
   return (
     <>
-      <ShopHeader />
-      <Items />
+        <h1>CART</h1>
     </>
   );
 };
 
-export default ShopPage;
+export default CartPage;

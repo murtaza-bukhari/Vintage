@@ -11,7 +11,7 @@ import item10 from "../assets/item10.png";
 import item11 from "../assets/item11.png";
 import item12 from "../assets/item12.png";
 
-type Product = {
+export type Product = {
     id: number;
     title: string;
     photo: string;
@@ -19,7 +19,7 @@ type Product = {
     price: number;
 };
 
-const products: Product[] = [
+export const products: Product[] = [
     {
         id: 1,
         title: "Classic Silver Shears",
@@ -85,25 +85,24 @@ const products: Product[] = [
     },
         {
         id: 10,
-        title: "Professional Styling Comb",
+        title: "Vintage Gold Clippers",
         photo: item10,
-        description: "A versatile dual-tooth comb made for precise everyday styling.",
-        price: 16,
+        description: "A neat and polished finish for a perfect trim.",
+        price: 49,
     },
         {
         id: 11,
-        title: "Professional Styling Comb",
+        title: "Wooden Duster",
         photo: item11,
-        description: "A versatile dual-tooth comb made for precise everyday styling.",
-        price: 16,
+        description: "Perfect for narrow openeings, smooth and sharp.",
+        price: 9,
     },
     {
         id: 12,
-        title: "Professional Styling Comb",
+        title: "Stainless Steel Bowl",
         photo: item12,
-        description: "A versatile dual-tooth comb made for precise everyday styling.",
-        price: 16,
+        description: "Highly durable and stable, perfect for everyday shaves",
+        price: 12,
     },
 ];
 
-export default products;
