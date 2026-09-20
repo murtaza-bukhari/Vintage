@@ -1,11 +1,15 @@
-//import { useOutletContext } from "react-router";
-//import type { ShopContext } from "../managers/ShopManager";
+import CartHeader from '../components/CartPage/CartHeader'
+import CartGrid from '../components/CartPage/CartGrid';
+
+import { useOutletContext } from "react-router";
+import type { ShopContext } from "../managers/ShopManager";
 
 const CartPage = () => {
-  //const { cart, setCart } = useOutletContext<ShopContext>();
+  const { cart, setCart } = useOutletContext<ShopContext>();
   return (
     <>
-        <h1>CART</h1>
+      <CartHeader/>
+      <CartGrid cart={cart} setCart={setCart} />
     </>
   );
 };

@@ -5,7 +5,7 @@ import { useOutletContext } from "react-router";
 import type { ShopContext } from "../managers/ShopManager";
 
 const ShopPage = () => {
-  const { cart, setCart } = useOutletContext<ShopContext>();
+  const { setCart } = useOutletContext<ShopContext>();
   return (
     <>
       <ShopHeader />
