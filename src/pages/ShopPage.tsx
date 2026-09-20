@@ -1,15 +1,15 @@
 import Items from "../components/ShopPage/Items";
 import ShopHeader from "../components/ShopPage/ShopHeader";
 
-//import { useOutletContext } from "react-router";
-//import type { ShopContext } from "../managers/ShopManager";
+import { useOutletContext } from "react-router";
+import type { ShopContext } from "../managers/ShopManager";
 
 const ShopPage = () => {
-  //const { cart, setCart } = useOutletContext<ShopContext>();
+  const { cart, setCart } = useOutletContext<ShopContext>();
   return (
     <>
       <ShopHeader />
-      <Items />
+      <Items setCart={setCart}/>
     </>
   );
 };

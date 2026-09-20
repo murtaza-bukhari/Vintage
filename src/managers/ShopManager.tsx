@@ -3,13 +3,19 @@ import { Outlet } from "react-router";
 import type { Dispatch, SetStateAction } from "react";
 import type { Product } from "../backend/products";
 
+
+export type CartItem = {
+  product: Product;
+  quantity: number;
+};
+
 export type ShopContext = {
-  cart: Product[];
-  setCart: Dispatch<SetStateAction<Product[]>>;
+  cart: CartItem[];
+  setCart: Dispatch<SetStateAction<CartItem[]>>;
 };
 
 const ShopManager = () => {
-  const [cart, setCart] = useState<Product[]>([]);
+  const [cart, setCart] = useState<CartItem[]>([]);
 
   return <Outlet context={{ cart, setCart }} />;
 };

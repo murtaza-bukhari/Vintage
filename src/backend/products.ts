@@ -29,7 +29,7 @@ export const products: Product[] = [
     },
     {
         id: 2,
-        title: "Midnight Barber Shears",
+        title: "Midnight Shears",
         photo: item2,
         description: "Dark steel shears combining sharp performance with timeless style.",
         price: 48,
@@ -78,7 +78,7 @@ export const products: Product[] = [
     },
     {
         id: 9,
-        title: "Professional Styling Comb",
+        title: "Styling Comb",
         photo: item9,
         description: "A versatile dual-tooth comb made for precise everyday styling.",
         price: 16,
